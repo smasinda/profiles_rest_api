@@ -27,7 +27,7 @@ class UserProfileManager(BaseUserManager):
 
         user.is_superuser = True
         user.is_staff = True
-        user.save(using_self._db)
+        user.save(using=self._db)
 
         return user
 
